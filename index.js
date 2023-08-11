@@ -19,10 +19,6 @@ import { generateSVG } from './utils/generate-svg.js'
 import { writeSVG } from './utils/write-svg.js'
 
 const {Circle, Triangle, Rectangle} = allShapes 
-
-const testCircle = new Rectangle('green','BRS', 'white')
-console.log(testCircle)
-
 //the user will send the command to run inquirer
     //they will be prompted for the up to 3 characters of text
     //they will be prompted for the text color (default white)
@@ -34,3 +30,62 @@ console.log(testCircle)
         //the file is save to the dist folder
 
     //it should be as the user entered it!    
+
+const questions = [
+    //text, text color, shape (list), shape color
+    {
+        type: 'input',
+        name: 'text',
+        message: 'What characters would you like in your logo (up to 3 characters)?',
+        default: 'BRS'
+    },
+    {
+        type: 'input',
+        name: 'textColor',
+        message: 'What color would you like the text to be (color name or hexadecimal)?',
+        default: 'white'
+    },
+    {
+        type: 'list',
+        name: 'shape',
+        message: 'What shape would you like your logo to be?',
+        choices: ['Circle', 'Triangle', 'Rectangle'],
+    },
+    {
+        type: 'input',
+        name: 'shapeColor',
+        message: 'What color would you like the shape to be (color name or hexadecimal)?',
+        default: 'green'
+    }
+]
+//starts the code
+const init = () => {
+
+    inquirer.prompt(questions)
+    .then((answers) => {
+        //function to return the proper shape?
+        var shape = getShape(answers)
+        console.log(shape)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+    //console.log('the program has started')
+}
+
+const getShape = (criteria) => {
+    const color = criteria.shapeColor
+    const text = criteria.text
+    const textColor = criteria.textColor
+    switch(criteria.shape){
+        case 'Circle':
+            return new Circle(color, text, textColor) 
+        case 'Triangle':
+            return new Triangle(color, text, textColor) 
+        case 'Rectangle':
+            return new Rectangle(color, text, textColor)     
+    }
+}
+
+init()
+

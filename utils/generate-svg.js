@@ -1,9 +1,6 @@
 //this file holds the XML and builds it based on what is sent from inquirer
 
-//a function returns this literal
-
 export const generateSVG = (shape) => {
-    // console.log(shape)
 
     const shapeXML = shape.render()
 

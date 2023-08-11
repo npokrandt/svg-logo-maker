@@ -65,7 +65,8 @@ const init = () => {
     .then((answers) => {
         //function to return the proper shape?
         var shape = getShape(answers)
-        console.log(shape)
+        const SVG = generateSVG(shape)
+        console.log(SVG)
     })
     .catch((err) => {
         console.log(err)

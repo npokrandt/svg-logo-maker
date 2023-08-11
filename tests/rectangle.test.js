@@ -1,5 +1,5 @@
 //will test that the rectangle renders correctly
-const Rectangle = require('../lib/Rectangle')
+const Rectangle = require('../lib/rectangle')
 
 describe('Rectangle Class', () => {
     it('renders correctly when render() is called', () => {

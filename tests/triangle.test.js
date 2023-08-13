@@ -1,6 +1,6 @@
-//will test that the triangle renders correctly
 const Triangle = require('../lib/triangle')
 
+//some tests for the triangle class
 describe('Triangle Class', () => {
     it('renders correctly when render() is called', () => {
         const color = 'green'

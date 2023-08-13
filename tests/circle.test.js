@@ -1,6 +1,6 @@
-//will test that the circle renders correctly
 const Circle = require('../lib/circle')
 
+//some tests for the circle class
 describe('Circle Class', () => {
     it('renders correctly when render() is called', () => {
         const color = 'green'

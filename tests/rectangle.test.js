@@ -1,6 +1,6 @@
-//will test that the rectangle renders correctly
 const Rectangle = require('../lib/rectangle')
 
+//some tests for the rectangle class
 describe('Rectangle Class', () => {
     it('renders correctly when render() is called', () => {
         const color = 'green'

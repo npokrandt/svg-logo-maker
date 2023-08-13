@@ -1,6 +1,6 @@
-//will test that the render method is only called on the child shapes, not the parent shape
 const Shape = require('../lib/shape')
 
+//some tests for the parent shape class
 describe('Shape Class', () => {
     it('throws an error when render is called directly', () => {
         const color = 'green'

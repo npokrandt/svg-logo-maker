@@ -1,22 +1,41 @@
 import { allShapes } from './lib/index.js'
 import inquirer from 'inquirer'
+import validateColor from 'validate-color'
 import { generateSVG } from './utils/generate-svg.js'
 import { writeSVG } from './utils/write-svg.js'
 
 const {Circle, Triangle, Rectangle} = allShapes   
 
+const valColor = validateColor.validateHTMLColorName
+const valColorHex = validateColor.validateHTMLColorHex
+
 const questions = [
+
     {
         type: 'input',
         name: 'text',
         message: 'What characters would you like in your logo (up to 3 characters)?',
-        default: 'BRS'
+        default: 'BRS',
+        validate: input => {
+            if (input.length > 3){
+                console.log('\n too long! Text must be less than 4 characters!')
+            } else {
+                return true
+            }
+        }
     },
     {
         type: 'input',
         name: 'textColor',
         message: 'What color would you like the text to be (color name or hexadecimal)?',
-        default: 'white'
+        default: 'white',
+        validate: input => {
+            if (valColor(input) || valColorHex(input)){
+                return true
+            } else {
+                console.log('\n Not a valid color')
+            }
+        }
     },
     {
         type: 'list',
@@ -28,7 +47,14 @@ const questions = [
         type: 'input',
         name: 'shapeColor',
         message: 'What color would you like the shape to be (color name or hexadecimal)?',
-        default: 'green'
+        default: 'green',
+        validate: input => {
+            if (valColor(input) || valColorHex(input)){
+                return true
+            } else {
+                console.log('\n Not a valid color')
+            }
+        }
     }
 ]
 

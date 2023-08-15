@@ -11,25 +11,12 @@ The user initiates the program using 'node index.js' in the CLI. From there they
 
 ![Screenshot of SVG logo generator](./svg-logo-generator-screenshot.PNG)
 
- "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "tsx",
-      "ts"
-    ],
-    "rootDir": "./tests/",
-    "transform": {
-      "^.+\\.(ts|tsx)?$": "ts-jest"
-    }
-  },
-
 ## Link
 
 Watch a video demo here:
-<!-- video when questions are finished -->
+https://www.loom.com/share/f25617f913b14470b43a989aa31e659e?sid=3de8dd82-30c2-4ae1-b0a8-2e7aa0c5a7cb
 
 ## Credits
 
-Much of this code is patterned off of work we've done in class and a previous challenge. Aside from that it is my own
+Much of this code is patterned off of work we've done in class and a previous challenge. Help from Max Rice and Lindsay Shrank-Kirchner for solving the test file import issue. Aside from that it is my own
 

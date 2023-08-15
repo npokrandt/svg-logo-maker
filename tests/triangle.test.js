@@ -1,4 +1,4 @@
-const Triangle = require('../lib/triangle')
+import Triangle from '../lib/triangle.js'
 
 //some tests for the triangle class
 describe('Triangle Class', () => {

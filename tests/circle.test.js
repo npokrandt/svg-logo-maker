@@ -1,4 +1,4 @@
-const Circle = require('../lib/circle')
+import Circle from '../lib/circle.js'
 
 //some tests for the circle class
 describe('Circle Class', () => {

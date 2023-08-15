@@ -1,4 +1,4 @@
-const Shape = require('../lib/shape')
+import Shape from '../lib/shape.js'
 
 //some tests for the parent shape class
 describe('Shape Class', () => {

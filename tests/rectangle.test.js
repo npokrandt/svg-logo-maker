@@ -1,4 +1,4 @@
-const Rectangle = require('../lib/rectangle')
+import Rectangle from '../lib/rectangle.js'
 
 //some tests for the rectangle class
 describe('Rectangle Class', () => {

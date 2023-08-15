@@ -11,6 +11,19 @@ The user initiates the program using 'node index.js' in the CLI. From there they
 
 ![Screenshot of SVG logo generator](./svg-logo-generator-screenshot.PNG)
 
+ "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "tsx",
+      "ts"
+    ],
+    "rootDir": "./tests/",
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    }
+  },
+
 ## Link
 
 Watch a video demo here:
